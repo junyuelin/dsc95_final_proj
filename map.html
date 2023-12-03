@@ -8877,47 +8877,6 @@ Cell <span class="ansi-green-fg">In[45], line 1</span>, in <span class="ansi-cya
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Javascript</span><span class="p">,</span> <span class="n">display</span>
-
-<span class="c1"># Create a button and a Markdown cell</span>
-<span class="n">button_html</span> <span class="o">=</span> <span class="s2">"""</span>
-<span class="s2">&lt;button onclick="toggle_visibility('markdown_cell')"&gt;Click to view the solution&lt;/button&gt;</span>
-<span class="s2">"""</span>
-
-<span class="n">markdown_cell</span> <span class="o">=</span> <span class="s2">"""</span>
-<span class="s2">&lt;div id="markdown_cell" style="display:none;"&gt;</span>
-<span class="s2">i. O($1$)</span>
-
-<span class="s2">ii. O($n$)</span>
-<span class="s2">&lt;/div&gt;</span>
-<span class="s2">"""</span>
-
-<span class="c1"># JavaScript to toggle visibility</span>
-<span class="n">toggle_script</span> <span class="o">=</span> <span class="s2">"""</span>
-<span class="s2">&lt;script&gt;</span>
-<span class="s2">    function toggle_visibility(id) {</span>
-<span class="s2">        var element = document.getElementById(id);</span>
-<span class="s2">        if (element.style.display == 'none') {</span>
-<span class="s2">            element.style.display = 'block';</span>
-<span class="s2">        } else {</span>
-<span class="s2">            element.style.display = 'none';</span>
-<span class="s2">        }</span>
-<span class="s2">    }</span>
-<span class="s2">&lt;/script&gt;</span>
-<span class="s2">"""</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8978,10 +8937,10 @@ ii. O($n$)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>map.ipynb
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--TagRemovePreprocessor.remove_cell_tags<span class="o">=</span><span class="s1">'{"hide_cell"}'</span><span class="w"> </span>map.ipynb
 </pre></div>
 </div>
 </div>
@@ -8995,7 +8954,7 @@ ii. O($n$)
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>[NbConvertApp] Converting notebook map.ipynb to html
-[NbConvertApp] Writing 358761 bytes to map.html
+[NbConvertApp] Writing 356864 bytes to map.html
 </pre>
 </div>
 </div>
