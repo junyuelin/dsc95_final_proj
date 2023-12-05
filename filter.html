@@ -14666,7 +14666,7 @@ Cell <span class="ansi-green-fg">In[10], line 2</span>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Animations</span>
@@ -14688,7 +14688,7 @@ Cell <span class="ansi-green-fg">In[10], line 2</span>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_filter_slides</span><span class="p">()</span>
@@ -15236,6 +15236,23 @@ the return type of filter() is &lt;class &#39;filter&#39;&gt;
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Similarities/differences-between-map()-and-filter()">Similarities/differences between map() and filter()<a class="anchor-link" href="#Similarities/differences-between-map()-and-filter()">&#182;</a></h4><p>similarities:</p>
+<ul>
+<li>both map and filter operate on iterables such as lists, tuples, strings, etc.</li>
+<li>both map and filter return iterator objects</li>
+</ul>
+<p>differences:</p>
+<ul>
+<li>map applies a function to each element in an iterable and returns an iterator with the results, filter applies a function to each element in an iterable and returns an iterator containing the elements for which the function evaluated to True</li>
+<li>the function filter takes in must return True/False, while the function map takes in doesn't have any restrictions</li>
+<li>map is used when you want to apply a specific function to all elements in an iterable and get the transformed elements</li>
+<li>filter is used when you want to selectively extract elements from an iterable based on a condition specified in the function</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h4><p>Try the below quizzes to test your understanding!</p>
 
 </div>
@@ -15399,27 +15416,10 @@ ii. return all(filter(lambda x: x[0] < x[1], lst_of_pairs))
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Similarities/differences-between-map()-and-filter()">Similarities/differences between map() and filter()<a class="anchor-link" href="#Similarities/differences-between-map()-and-filter()">&#182;</a></h4><p>similarities:</p>
-<ul>
-<li>both map and filter operate on iterables such as lists, tuples, strings, etc.</li>
-<li>both map and filter return iterator objects</li>
-</ul>
-<p>differences:</p>
-<ul>
-<li>map applies a function to each element in an iterable and returns an iterator with the results, filter applies a function to each element in an iterable and returns an iterator containing the elements for which the function evaluated to True</li>
-<li>the function filter takes in must return True/False, while the function map takes in doesn't have any restrictions</li>
-<li>map is used when you want to apply a specific function to all elements in an iterable and get the transformed elements</li>
-<li>filter is used when you want to selectively extract elements from an iterable based on a condition specified in the function</li>
-</ul>
-
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html --TagRemovePreprocessor.remove_cell_tags<span class="o">=</span><span class="s1">&#39;{&quot;hide_cell&quot;}&#39;</span> filter.ipynb
@@ -15443,7 +15443,7 @@ ii. return all(filter(lambda x: x[0] < x[1], lst_of_pairs))
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[NbConvertApp] Converting notebook filter.ipynb to html
-[NbConvertApp] Writing 620702 bytes to filter.html
+[NbConvertApp] Writing 620708 bytes to filter.html
 </pre>
 </div>
 </div>
