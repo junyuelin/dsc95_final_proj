@@ -7854,28 +7854,6 @@ Cell <span class="ansi-green-fg">In[3], line 1</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Animations</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">IFrame</span><span class="p">,</span> <span class="n">clear_output</span>
-<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-<span class="k">def</span> <span class="nf">show_map_slides</span><span class="p">():</span>
-    <span class="n">src</span> <span class="o">=</span> <span class="s2">"https://docs.google.com/presentation/d/e/2PACX-1vSuBCzAYvrIO4YpWpH5MfbkooWzFncxMythw9LQRuXMLch0rWYi155lPk6LZ08jc5vi-fgqUgSxQnIb/embed?start=true&amp;loop=false&amp;delayms=3000"</span>
-    <span class="n">width</span> <span class="o">=</span> <span class="mi">960</span>
-    <span class="n">height</span> <span class="o">=</span> <span class="mi">509</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8839,6 +8817,28 @@ Cell <span class="ansi-green-fg">In[45], line 1</span>, in <span class="ansi-cya
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Similarities/differences-between-map()-and-filter()">Similarities/differences between map() and filter()<a class="anchor-link" href="#Similarities/differences-between-map()-and-filter()">¶</a></h4><p>similarities:</p>
+<ul>
+<li>both <code>map</code> and <code>filter</code> operate on iterables such as lists, tuples, strings, etc.</li>
+<li>both <code>map</code> and <code>filter</code> return iterator objects</li>
+</ul>
+<p>differences:</p>
+<ul>
+<li><code>map</code> applies a function to each element in an iterable and returns an iterator with the results, <code>filter</code> applies a function to each element in an iterable and returns an iterator containing the elements for which the function evaluated to True</li>
+<li>the function <code>filter</code> takes in must return True/False, while the function <code>map</code> takes in doesn't have any restrictions</li>
+<li><code>map</code> is used when you want to apply a specific function to all elements in an iterable and get the transformed elements</li>
+<li><code>filter</code> is used when you want to selectively extract elements from an iterable based on a condition specified in the function</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h4 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">¶</a></h4><p>Try the below quizzes to test your understanding!</p>
 </div>
 </div>
@@ -8875,125 +8875,6 @@ Cell <span class="ansi-green-fg">In[45], line 1</span>, in <span class="ansi-cya
 <li>O($1$)</li>
 <li>None of the above</li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Similarities/differences-between-map()-and-filter()">Similarities/differences between map() and filter()<a class="anchor-link" href="#Similarities/differences-between-map()-and-filter()">¶</a></h4><p>similarities:</p>
-<ul>
-<li>both map and filter operate on iterables such as lists, tuples, strings, etc.</li>
-<li>both map and filter return iterator objects</li>
-</ul>
-<p>differences:</p>
-<ul>
-<li>map applies a function to each element in an iterable and returns an iterator with the results, filter applies a function to each element in an iterable and returns an iterator containing the elements for which the function evaluated to True</li>
-<li>the function filter takes in must return True/False, while the function map takes in doesn't have any restrictions</li>
-<li>map is used when you want to apply a specific function to all elements in an iterable and get the transformed elements</li>
-<li>filter is used when you want to selectively extract elements from an iterable based on a condition specified in the function</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Display the button and Markdown cell</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">button_html</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">markdown_cell</span><span class="p">))</span>
-<span class="c1"># Display the JavaScript</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">toggle_script</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<button onclick="toggle_visibility('markdown_cell')">Click to view the solution</button>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div id="markdown_cell" style="display:none;">
-i. O($1$)
-
-ii. O($n$)
-</div>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<script>
-    function toggle_visibility(id) {
-        var element = document.getElementById(id);
-        if (element.style.display == 'none') {
-            element.style.display = 'block';
-        } else {
-            element.style.display = 'none';
-        }
-    }
-</script>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--TagRemovePreprocessor.remove_cell_tags<span class="o">=</span><span class="s1">'{"hide_cell"}'</span><span class="w"> </span>map.ipynb
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[NbConvertApp] Converting notebook map.ipynb to html
-[NbConvertApp] Writing 354921 bytes to map.html
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
 </div>
 </div>
 </div>
