@@ -7484,7 +7484,7 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Table-of-Contents:">Table of Contents:<a class="anchor-link" href="#Table-of-Contents:">¶</a></h3><ul>
 <li>recap: iterable vs iterator</li>
-<li>definition of map function</li>
+<li>definition of <code>map()</code></li>
 <li><code>map()</code> with different types of iterable</li>
 <li><code>map()</code> with explicit function/lambda function</li>
 <li>similarity/difference with list comprehension</li>
@@ -7502,10 +7502,10 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h4 id="What-is-an-Iterable-in-Python?">What is an Iterable in Python?<a class="anchor-link" href="#What-is-an-Iterable-in-Python?">¶</a></h4><ul>
-<li>an iterable is an object that you can iterate over</li>
+<li>An iterable is an object that you can iterate over</li>
 <li>Eg. list, tuple, dictionary, set, string, etc</li>
-<li><strong>can’t</strong> use iterables as direct arguments to the <code>next()</code> function</li>
-<li>in Python, the built-in function <code>iter()</code> can take in an iterable and return an iterator</li>
+<li><strong>Can’t</strong> use iterables as direct arguments to the <code>next()</code> function</li>
+<li>In Python, the built-in function <code>iter()</code> can take in an iterable and return an iterator</li>
 </ul>
 </div>
 </div>
@@ -7590,9 +7590,9 @@ Cell <span class="ansi-green-fg">In[8], line 3</span>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>if you want a quick way to determine whether an object is iterable, then pass it as an argument to <code>iter()</code>.</li>
+<li>If you want a quick way to determine whether an object is iterable, then pass it as an argument to <code>iter()</code>.</li>
 <li>If you get an iterator back, then your object is iterable.</li>
-<li>If you get an error, then the object isn’t iterable</li>
+<li>If you get an error, then the object isn’t iterable.</li>
 </ul>
 </div>
 </div>
@@ -7634,7 +7634,7 @@ Cell <span class="ansi-green-fg">In[8], line 3</span>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># If you get an error, then the object isn’t iterable</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># if you get an error, then the object isn’t iterable</span>
 <span class="nb">iter</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -7738,8 +7738,8 @@ Cell <span class="ansi-green-fg">In[10], line 2</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Definition-of-map-Function">Definition of map Function<a class="anchor-link" href="#Definition-of-map-Function">¶</a></h4><ul>
-<li>sytax: <code>map(function, iterable1, iterable2, ...) -&gt; iterator</code></li>
+<h4 id="Definition-of-map()">Definition of <code>map()</code><a class="anchor-link" href="#Definition-of-map()">¶</a></h4><ul>
+<li>syntax: <code>map(function, iterable1, iterable2, ...) -&gt; iterator</code></li>
 <li>takes in a function and one or more iterables</li>
 <li>returns an iterator called a map object</li>
 <li>how to obtain values from <code>map()</code>, Eg. <code>list()</code> or <code>next()</code></li>
@@ -7755,7 +7755,7 @@ Cell <span class="ansi-green-fg">In[10], line 2</span>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># sytax: map(function, iterable1, iterable2, ...) -&gt; iterator</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># syntax: map(function, iterable1, iterable2, ...) -&gt; iterator</span>
 <span class="n">nums1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">nums2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 <span class="n">map1</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">nums1</span><span class="p">,</span> <span class="n">nums2</span><span class="p">)</span>
@@ -7816,8 +7816,8 @@ Cell <span class="ansi-green-fg">In[10], line 2</span>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>since the iterator is exhausted, meaning there is no more element to iteratre, next() would output an error</li>
-<li>note that there is no way to access consumed values; you have to create a completely new iterator to iterate through values again</li>
+<li>Since the iterator is exhausted, meaning there is no more element to iterate, next() would output an error.</li>
+<li>Note that there is no way to access consumed values; you have to create a completely new iterator to iterate through values again.</li>
 </ul>
 </div>
 </div>
@@ -7850,6 +7850,32 @@ Cell <span class="ansi-green-fg">In[3], line 1</span>
 <span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">next</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">map1</span><span class="ansi-yellow-bg">)</span>
 
 <span class="ansi-red-fg">StopIteration</span>: </pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">show_map_slides</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<iframe allowfullscreen="" frameborder="0" height="509" src="https://docs.google.com/presentation/d/e/2PACX-1vSuBCzAYvrIO4YpWpH5MfbkooWzFncxMythw9LQRuXMLch0rWYi155lPk6LZ08jc5vi-fgqUgSxQnIb/embed?start=true&amp;loop=false&amp;delayms=3000" width="960"></iframe>
 </div>
 </div>
 </div>
@@ -8016,6 +8042,21 @@ Cell <span class="ansi-green-fg">In[5], line 4</span>, in <span class="ansi-cyan
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="n">nums1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">nums2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">var</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">nums1</span><span class="p">,</span> <span class="n">nums2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>To obtain values from the iterator, you need to either</p>
 <ul>
 <li>iterate over it or</li>
@@ -8093,10 +8134,10 @@ Cell <span class="ansi-green-fg">In[5], line 4</span>, in <span class="ansi-cyan
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="map()-with-Different-Types-of-Iterable">map() with Different Types of Iterable<a class="anchor-link" href="#map()-with-Different-Types-of-Iterable">¶</a></h4><ul>
+<h4 id="map()-with-Different-Types-of-Iterable"><code>map()</code> with Different Types of Iterable<a class="anchor-link" href="#map()-with-Different-Types-of-Iterable">¶</a></h4><ul>
 <li>Iterables are objects that can be iterated in iterations.</li>
-<li>Iterable in Python: list, tuple, set, dictionary, string, etc</li>
-<li><code>map()</code> could take in iterables, like list, tuple, set, dictionary, string, etc</li>
+<li>Iterable in Python: list, tuple, set, dictionary, string, etc.</li>
+<li><code>map()</code> could take in iterables, like list, tuple, set, dictionary, string, etc.</li>
 </ul>
 </div>
 </div>
@@ -8168,7 +8209,7 @@ Cell <span class="ansi-green-fg">In[5], line 4</span>, in <span class="ansi-cyan
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="map()-with-Explicit-Function/Lambda-Function">map() with Explicit Function/Lambda Function<a class="anchor-link" href="#map()-with-Explicit-Function/Lambda-Function">¶</a></h4><ul>
+<h4 id="map()-with-Explicit-Function/Lambda-Function"><code>map()</code> with Explicit Function/Lambda Function<a class="anchor-link" href="#map()-with-Explicit-Function/Lambda-Function">¶</a></h4><ul>
 <li><code>map()</code> could take in an explicit function or a lambda function</li>
 <li><code>map()</code> with <strong>explicit function</strong> would be faster than <code>map()</code> with <strong>lambda function</strong> because the function is defined ahead of time</li>
 </ul>
@@ -8244,7 +8285,7 @@ Cell <span class="ansi-green-fg">In[5], line 4</span>, in <span class="ansi-cyan
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><code>map()</code> with <strong>explicit function</strong> would be faster than <code>map()</code> with <strong>lambda function</strong> because the function is defined ahead of time</p>
+<p><code>map()</code> with <strong>explicit function</strong> would be faster than <code>map()</code> with <strong>lambda function</strong> because the function is defined ahead of time.</p>
 </div>
 </div>
 </div>
@@ -8305,7 +8346,6 @@ Cell <span class="ansi-green-fg">In[5], line 4</span>, in <span class="ansi-cyan
 <li><code>map()</code> can perform lazy evaluation, which is better in terms of memory efficiency</li>
 </ul>
 </li>
-<li>time efficiency</li>
 </ul>
 </div>
 </div>
@@ -8598,7 +8638,7 @@ Cell <span class="ansi-green-fg">In[45], line 1</span>, in <span class="ansi-cya
 <p>Here is another example of the memory efficiency. In this example,</p>
 <ul>
 <li>If you use <code>map()</code>, aside from the input list, you will only need memory for a single square value at a time,</li>
-<li>whereas list comprehension needs memory to store the resulting list</li>
+<li>whereas list comprehension needs memory to store the resulting list.</li>
 </ul>
 </div>
 </div>
@@ -8641,139 +8681,6 @@ Cell <span class="ansi-green-fg">In[45], line 1</span>, in <span class="ansi-cya
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Time-Efficiency:--map()-vs-list-comprehension">Time Efficiency:  <code>map()</code> vs list comprehension<a class="anchor-link" href="#Time-Efficiency:--map()-vs-list-comprehension">¶</a></h4><ul>
-<li>if we ignore the laziness of <code>map()</code> and a list output is preferred, <code>map()</code> needs to take the extra step to turn the iterator object into a list</li>
-<li>note <code>map()</code> with <strong>lambda function</strong> is generally <strong>slower</strong> than <strong>list comprehension</strong> in most cases, assuming all values are evaluated/used</li>
-<li><code>map()</code> with <strong>explicit function</strong> would be <strong>slower</strong> than list comprehension if using a simple customer function where list comprehension could use a simple expression</li>
-<li>however, <code>map()</code> with <strong>explicit function</strong> would be <strong>faster</strong> than list comprehension if using a built-in function, like <code>sum()</code> and <code>sqrt()</code></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li>note <code>map()</code> with <strong>lambda function</strong> is generally <strong>slower</strong> than <strong>list comprehension</strong> in most cases, assuming all values are evaluated/used</li>
-<li><code>map()</code> with <strong>explicit function</strong> would be <strong>slower</strong> than list comprehension if using a simple customer function where list comprehension could use a simple expression</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">txns</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">)]</span>
-<span class="n">TAX_RATE</span> <span class="o">=</span> <span class="mf">.08</span>
-
-<span class="c1"># using simple custom function</span>
-<span class="k">def</span> <span class="nf">get_price</span><span class="p">(</span><span class="n">txn</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">txn</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">TAX_RATE</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">get_prices_with_map_explicit</span><span class="p">():</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">get_price</span><span class="p">,</span> <span class="n">txns</span><span class="p">))</span>
-<span class="k">def</span> <span class="nf">get_prices_with_map_lambda</span><span class="p">():</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">TAX_RATE</span><span class="p">),</span> <span class="n">txns</span><span class="p">))</span>
-<span class="k">def</span> <span class="nf">get_prices_with_comprehension</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">txn</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">TAX_RATE</span><span class="p">)</span> <span class="k">for</span> <span class="n">txn</span> <span class="ow">in</span> <span class="n">txns</span><span class="p">]</span>
-
-<span class="n">m1</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">get_prices_with_map_explicit</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">' time map function with explicit function: </span><span class="si">{</span><span class="n">m1</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="n">m2</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">get_prices_with_map_lambda</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">' time map function with lambda funcion: </span><span class="si">{</span><span class="n">m2</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="n">l1</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">get_prices_with_comprehension</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">' time list comprehension: </span><span class="si">{</span><span class="n">l1</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre> time map function with explicit function: 0.5850220000138506
- time map function with lambda funcion: 0.6170097090071067
- time list comprehension: 0.46064204099820927
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li>however, <code>map()</code> with <strong>explicit function</strong> would be <strong>faster</strong> than <code>list comprehension</code> if using a built-in function, like <code>abs()</code>, <code>sum()</code> or <code>sqrt()</code></li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
-
-<span class="n">NUMBERS</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1_000_001</span><span class="p">)</span>
-
-<span class="c1"># using built-in function</span>
-<span class="k">def</span> <span class="nf">map_sqrt</span><span class="p">():</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">abs</span><span class="p">,</span> <span class="n">NUMBERS</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">comprehension_sqrt</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">NUMBERS</span><span class="p">]</span>
-
-<span class="n">m1</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">map_sqrt</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">' time map function with explicit function: </span><span class="si">{</span><span class="n">m1</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="n">l1</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">comprehension_sqrt</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">' time list comprehension: </span><span class="si">{</span><span class="n">l1</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre> time map function with explicit function: 2.2236291670124047
- time list comprehension: 3.9300769999972545
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Rule of Thumb:</p>
 <ul>
 <li>use <code>list comprehension</code> or <code>map()</code> depending on your application</li>
@@ -8793,15 +8700,15 @@ Cell <span class="ansi-green-fg">In[45], line 1</span>, in <span class="ansi-cya
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h4 id="Similarities/differences-between-map()-and-filter()">Similarities/differences between map() and filter()<a class="anchor-link" href="#Similarities/differences-between-map()-and-filter()">¶</a></h4><p>similarities:</p>
 <ul>
-<li>both <code>map</code> and <code>filter</code> operate on iterables such as lists, tuples, strings, etc.</li>
-<li>both <code>map</code> and <code>filter</code> return iterator objects</li>
+<li>Both <code>map</code> and <code>filter</code> operate on iterables such as lists, tuples, strings, etc.</li>
+<li>Both <code>map</code> and <code>filter</code> return iterator objects.</li>
 </ul>
 <p>differences:</p>
 <ul>
-<li><code>map</code> applies a function to each element in an iterable and returns an iterator with the results, <code>filter</code> applies a function to each element in an iterable and returns an iterator containing the elements for which the function evaluated to True</li>
-<li>the function <code>filter</code> takes in must return True/False, while the function <code>map</code> takes in doesn't have any restrictions</li>
-<li><code>map</code> is used when you want to apply a specific function to all elements in an iterable and get the transformed elements</li>
-<li><code>filter</code> is used when you want to selectively extract elements from an iterable based on a condition specified in the function</li>
+<li><code>map</code> applies a function to each element in an iterable and returns an iterator with the results, <code>filter</code> applies a function to each element in an iterable and returns an iterator containing the elements for which the function evaluated to True.</li>
+<li>The function <code>filter</code> takes in must return True/False, while the function <code>map</code> takes in doesn't have any restrictions.</li>
+<li><code>map</code> is used when you want to apply a specific function to all elements in an iterable and get the transformed elements.</li>
+<li><code>filter</code> is used when you want to selectively extract elements from an iterable based on a condition specified in the function.</li>
 </ul>
 </div>
 </div>
